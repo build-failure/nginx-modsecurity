@@ -1,4 +1,4 @@
-![Build](https://github.com/build-failure/nginx-modesecurity/actions/workflows/main.yml/badge.svg)
+![Build](https://github.com/build-failure/nginx-modsecurity/actions/workflows/main.yml/badge.svg)
 
 # Nginx ModSecurity
 
