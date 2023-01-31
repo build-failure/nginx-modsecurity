@@ -1,0 +1,11 @@
+version: "2.3"
+services:
+    reverse-proxy:
+        image: buildfailure/nginx-modsecurity:1.22.1
+        volumes:
+        -   ./etc/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+    waf-analyzer:
+        image: nemesida/waf-bypass:latest
+        depends_on:
+            -   reverse-proxy
+        command: ["--host=reverse-proxy"]
